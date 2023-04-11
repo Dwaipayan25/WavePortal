@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { ethers } from "ethers";
 import WavePortal2 from "./utils/WavePortal2.json";
+import "./App.css";
 
 function App() {
   const [message, setMessage] = useState("");
@@ -80,6 +81,12 @@ function App() {
   return (
     <div>
       <h1>Wave Portal</h1>
+      <h2>
+        Hey guys!
+        I am Dwaipayan Dehury, I am a web3 developer!
+        You can send me a message and pay me atleast
+        0.000001 ETH.
+      </h2>
       {!account ? (
         <button onClick={connectMetamask}>Connect to Metamask</button>
       ) : (
@@ -117,7 +124,7 @@ function App() {
               <th>From</th>
               <th>Message</th>
               <th>Timestamp</th>
-              <th>Value</th>
+              <th>Value(in Wei)</th>
             </tr>
           </thead>
           <tbody>
